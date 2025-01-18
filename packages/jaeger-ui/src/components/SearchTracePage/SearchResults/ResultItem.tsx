@@ -14,7 +14,6 @@
 
 import * as React from 'react';
 import { Col, Divider, Row, Tag } from 'antd';
-import { LocationDescriptor } from 'history';
 import { Link } from 'react-router-dom';
 
 import _sortBy from 'lodash/sortBy';
@@ -51,6 +50,14 @@ type State = {
   timeStr: string;
   fromNow: string | boolean;
 };
+
+export type LocationDescriptor = string | {
+    pathname?: string;
+    search?: string;
+    state?: unknown;
+    hash?: string;
+    key?: string;
+}
 
 const isErrorTag = ({ key, value }: KeyValuePair<boolean | string>) =>
   key === 'error' && (value === true || value === 'true');

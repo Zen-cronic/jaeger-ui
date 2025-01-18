@@ -14,7 +14,6 @@
 
 import * as React from 'react';
 import { Checkbox } from 'antd';
-import { LocationDescriptor } from 'history';
 import { Link } from 'react-router-dom';
 
 import TraceName from '../../common/TraceName';
@@ -26,6 +25,7 @@ import { ApiError } from '../../../types/api-error';
 
 import './ResultItemTitle.css';
 import { getTargetEmptyOrBlank } from '../../../utils/config/get-target';
+import { LocationDescriptor } from './ResultItem';
 
 type Props = {
   duration?: number;
